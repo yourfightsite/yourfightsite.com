@@ -12,6 +12,7 @@
   },
   "scripts": {
     "build": "./build.sh",
-    "dev": "gulp"
+    "dev": "gulp",
+    "serve": "bundle exec jekyll serve -w"
   }
 }
