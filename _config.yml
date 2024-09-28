@@ -12,12 +12,14 @@ exclude:
   - CNAME
   - Gemfile
   - Gemfile.lock
-  - gulpfile.js
   - node_modules
   - package-lock.json
   - package.json
 
 sass:
+  load_paths:
+    - node_modules
+  sass_dir: _sass
   style: compressed
 
 collections:

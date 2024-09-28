@@ -1,18 +1,7 @@
 {
   "name": "yourfightsite",
-  "private": true,
   "devDependencies": {
-    "bootstrap": "^4.4.1",
-    "gulp": "^4.0.2",
-    "gulp-notify": "^3.2.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-sourcemaps": "^2.6.5",
-    "jquery": "^3.5.1",
-    "popper.js": "^1.16.1"
+    "bootstrap": "^4.6.2"
   },
-  "scripts": {
-    "build": "./build.sh",
-    "dev": "gulp",
-    "serve": "bundle exec jekyll serve -w"
-  }
+  "private": true
 }
