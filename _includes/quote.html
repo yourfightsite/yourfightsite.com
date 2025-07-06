@@ -64,7 +64,9 @@
               </div>
             </fieldset>
             <fieldset x-bind:disabled="form.processing">
-              <legend>Services interested in</legend>
+              <legend>
+                <label for="service-web-design">Services interested in</label>
+              </legend>
               <div class="gap-3 vstack">
                 <div>
                   <div class="form-check">
@@ -72,8 +74,8 @@
                     <label class="form-check-label" for="service-web-design">Web design</label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" id="service-vod" name="services[]" type="checkbox" value="vod" x-model="form.data.services">
-                    <label class="form-check-label" for="service-vod">Video on demand</label>
+                    <input class="form-check-input" id="service-video-on-demand" name="services[]" type="checkbox" value="video-on-demand" x-model="form.data.services">
+                    <label class="form-check-label" for="service-video-on-demand">Video on demand</label>
                   </div>
                 </div>
                 <div class="form-group">
