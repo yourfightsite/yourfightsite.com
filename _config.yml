@@ -34,7 +34,7 @@ defaults:
 
 permalink: "/news/:year/:month/:day/:slug"
 
-analytics_id: "UA-50420715-1"
+analytics_id: "G-HZD6FGH85S"
 
 twitter:
   username: yourfightsite
