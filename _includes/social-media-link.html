@@ -1,0 +1,6 @@
+<li class="list-inline-item">
+  <a class="d-block lh-1 p-3 overflow-hidden position-relative rounded-circle social-media-link" href="{{ include.href }}" rel="external nofollow noreferer" target="_blank" title="Your Fight Site on {{ include.platform }}">
+    <span class="visually-hidden">Your Fight Site on {{ include.platform }}</span>
+    <span aria-hidden="true" class="bi bi-{{ include.icon | default: include.platform | slugify }} position-absolute top-50 start-50 translate-middle"></span>
+  </a>
+</li>

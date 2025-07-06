@@ -5,20 +5,17 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-redirect-from
-  - jekyll-seo-tag
 
 exclude:
-  - build.sh
-  - CNAME
+  - Dockerfile
   - Gemfile
   - Gemfile.lock
+  - Makefile
   - node_modules
   - package-lock.json
   - package.json
 
 sass:
-  load_paths:
-    - node_modules
   sass_dir: _sass
   style: compressed
 
@@ -26,16 +23,7 @@ collections:
   projects:
     output: false
 
-  training_schools:
-    output: false
-    permalink: /wrestling-training-schools/:name
-
 defaults:
-  -
-    scope:
-      path: ""
-    values:
-      messenger: true
   -
     scope:
       path: ""
@@ -43,12 +31,6 @@ defaults:
     values:
       active_nav: news
       layout: post
-  -
-    scope:
-      path: ""
-      type: "training_schools"
-    values:
-      country: GB
 
 permalink: "/news/:year/:month/:day/:slug"
 
@@ -69,3 +51,57 @@ author:
   twitter: martinbean
 
 paginate: 10
+
+clients:
+  - name: Academy Pro Wrestling
+    url: https://www.apwprowrestling.com
+  - name: Atomic Pro Wrestling
+    url: https://vod.yourfightsite.com/channels/wrestleatomic
+  - name: "ATTACK! Pro Wrestling"
+    url: https://www.attackprowrestling.com
+  - name: Black Country Championship Wrestling
+    url: https://vod.yourfightsite.com/channels/black-country-championship-wrestling
+  - name: Branded Outlaw Wrestling
+    url: https://vod.yourfightsite.com/channels/branded-outlaw-wrestling
+  - name: British Championship Wrestling
+    url: https://www.bcw-wrestling.com
+  - name: Fight Factory Pro Wrestling
+    url: https://www.ffpwwrestling.com
+  - name: Fight Factory Wrestling
+    url: https://www.fightfactorywrestling.com
+  - name: Independent Wrestling Universe
+    url: https://vod.yourfightsite.com/channels/independent-wrestling-universe
+  - name: Kamikaze Pro
+    url: https://vod.yourfightsite.com/channels/kamikaze-pro
+  - name: LDN Wrestling
+    url: https://www.ldnwrestling.com
+  - name: Lion Wrestling Promotions
+    url: https://www.lionwrestlingpromotions.com
+  - name: New Wave Wrestling Academy
+    url: https://vod.yourfightsite.com/channels/new-wave-wrestling-academy
+  - name: Premier British Wrestling
+    url: https://www.pbwwrestling.com
+  - name: Premium Wrestling Entertainment
+    url: https://www.pwe2024.com
+  - name: Pro Wrestling 4 U
+    url: https://vod.yourfightsite.com/channels/pro-wrestling-4-u
+  - name: Pro Wrestling Chaos
+    url: https://www.prowrestlingchaos.com
+  - name: Pro Wrestling Karnage
+    url: https://vod.yourfightsite.com/channels/pro-wrestling-karnage
+  - name: Shropshire Wrestling Alliance
+    url: https://www.shropshirewrestlingalliance.com
+  - name: South West Wrestling
+    url: https://vod.yourfightsite.com/channels/south-west-wrestling
+  - name: SPOTFEST Wrestling Events
+    url: https://www.spotfestwrestling.co.uk
+  - name: TNT Extreme Wrestling
+    url: https://www.tnt-wrestling.co.uk
+  - name: UK Wrestling Alliance
+    url: https://vod.yourfightsite.com/channels/uk-wrestling-alliance
+  - name: Ultimate Championship Wrestling
+    url: https://www.ucwlegacy.co.uk
+  - name: Winnipeg Pro Wrestling
+    url: https://www.wpgprowrestling.com
+  - name: Wrestling In Hinckley
+    url: https://vod.yourfightsite.com/channels/wrestling-in-hinckley

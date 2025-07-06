@@ -1,0 +1,26 @@
+<header class="bg-body hero {% if include.image %}pb-0{% else %}pb-3{% endif %} text-body" data-bs-theme="dark">
+  <div class="container">
+    <div class="hero-content py-3 py-sm-4 py-md-5{% if include.image %} pb-0 pb-sm-0{% endif %}">
+      <div class="row">
+        <div class="col-12{% if include.image %} col-md-6{% endif %}">
+          <div class="last-child-mb-0 prose">
+            <h1 class="mb-3 text-body-emphasis">{{ include.title }}</h1>
+            <p class="hero-text">{{ include.content }}</p>
+            {% if include.cta %}
+              <div class="mt-4">
+                {{ include.cta }}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+        {% if include.image %}
+          <div class="col-12 col-md-6 pt-4 pt-md-0">
+            <div class="mb-n5 mb-md-n3 mt-md-n3">
+              {{ include.image }}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</header>

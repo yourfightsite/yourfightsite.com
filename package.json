@@ -1,7 +1,7 @@
 {
   "name": "yourfightsite",
   "devDependencies": {
-    "bootstrap": "^4.6.2"
+    "bootstrap": "^5.3.7"
   },
   "private": true
 }

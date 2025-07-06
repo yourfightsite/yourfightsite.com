@@ -1,85 +1,68 @@
 ---
-excerpt: Learn more about Your Fight Site VOD, a free-to-use video on demand service for wrestling and MMA promoters like you.
+breadcrumb:
+  - href: 'index.html'
+    title: Your Fight Site
+  - active: true
+    title: Video On Demand
+excerpt: "Video on demand platform created for wrestling, MMA, and boxing promoters. Upload and monetise your video content today."
 layout: default
-messenger_logged_in_greeting: 'Hey! Can we help you get started with a video on demand channel?'
-messenger_greeting_dialog_delay: 10
-messenger_ref: vod
 permalink: /video-on-demand/
-title: Wrestling video on demand platform
+schema:
+  '@context': 'https://schema.org'
+  '@type': 'Product'
+  description: 'Video on demand platform carrying wrestling, MMA, and boxing video content.'
+  image: 'https://www.yourfightsite.com/img/logo@2x.png'
+  name: Video On Demand
+title: Your Fight Site VOD
 ---
-<header class="pt-4" id="introduction">
-  <div class="container text-center">
-    <h1>A video on demand service for wrestling and <abbr title="Mixed Martial Arts">MMA</abbr> promoters.</h1>
-    <p class="lead">Your Fight Site <abbr class="initialism" title="Video On Demand">VOD</abbr> isn’t a video on demand service for us, it’s a video on demand service for promoters like <strong>you</strong>.</p>
-  </div>
-</header>
-
-<div class="container text-center">
-  <div class="row">
-    <div class="col-sm-10 offset-sm-1">
-      <figure class="mb-0">
-        <img src="/img/pages/video-on-demand/hero.png" alt="Your Fight Site VOD website screen-shot" class="img-fluid" />
-      </figure>
-    </div>
+<div class="bg-body text-body" data-bs-theme="dark">
+  <div class="container">
+    {% include breadcrumb.html %}
   </div>
 </div>
-
-<section class="mb-4" id="features">
-  <div class="container">
-    <header class="text-center">
-      <h1 class="h3">A video on demand platform, build for you, by you.</h1>
-    </header>
-    <div class="row">
-      <div class="col-sm-10 offset-sm-1  col-lg-8 offset-lg-2">
-        <p>
-          We work closely with <strong>all</strong> promoters on Your Fight Site <abbr class="initialism" title="Video On Demand">VOD</abbr>.
-          Our aim is to build the <strong>best</strong> video on demand service for wrestling and <abbr class="initialism" title="Mixed Martial Arts">MMA</abbr>.
-        </p>
-        <p class="mb-0">
-          We build new features quickly, act on promoters’ feedback, and can build custom integrations for your existing websites and services.
-          What other video on demand service can claim that level of communication?
-        </p>
+<main class="pb-4" role="main">
+  <div class="gap-4 vstack">
+    {% capture hero_title %}Sell your wrestling, <abbr title="Mixed Martial Arts">MMA</abbr>, or boxing video content online{% endcapture %}
+    {% capture hero_cta %}
+      <a class="btn btn-lg btn-primary" href="https://vod.yourfightsite.com/channels/create?utm_source=yourfightsite.com&utm_medium=web&utm_campaign=create_channel&utm_content=hero_cta" target="_blank" title="Create a video on demand channel">
+        <span>Get started</span>
+        <span aria-hidden="true" class="bi bi-chevron-right"></span>
+      </a>
+    {% endcapture %}
+    {% include hero.html title=hero_title content="Create your own video on demand channel for free today. Then easily upload your video content to be sold via rentals and subscriptions." cta=hero_cta %}
+    <section id="summary">
+      <div class="container">
+        <div class="last-child-mb-0 prose">
+          <h2>A video on demand platform. Built for you, by you.</h2>
+          <p>We work closely with all customers on Your Fight Site <abbr title="Video On Demand">VOD</abbr>&trade;. Our aim is to build the best video on demand service for wrestling, <abbr title="Mixed Martial Arts">MMA</abbr>, boxing, and combat sports promoters and gyms.</p>
+          <p>We build new features quickly, act on customers’ feedback, and can build custom integrations for your existing websites and services. What other video on demand service can claim that level of partnership?</p>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<div class="container mb-4">
-  <div class="text-center">
-    <a class="btn btn-primary" href="https://vod.yourfightsite.com/channels/create" rel="external" target="_blank">
-      <span class="btn-text">Create your <span class="hidden-xs">video on demand</span> channel for free now</span>
-      <span style="position: relative; top: -1px;">
-        <span class="fas fa-fw fa-external-link-alt ml-1"></span>
-      </span>
-    </a>
-  </div>
-</div>
-
-<section class="mb-5" id="testimonials">
-  <div class="container">
-    <div class="row">
-      <div class="col-10 offset-1  col-md-8 offset-md-2  col-lg-6 offset-lg-3">
-        <blockquote class="blockquote blockquote-testimonial">
-          <p>
-            Using Your Fight Site <abbr class="initialism" title="Video On Demand">VOD</abbr> has been <span class="highlight">brilliant</span>.
-            The support is there whenever I’ve needed it, <span class="highlight">there’s no set-up costs</span>, and the platform is <span class="highlight">simple and clear</span> to use.
-            I’ve used the service for over three years now and <span class="highlight">couldn’t be happier</span> with it.
-          </p>
-          <footer class="blockquote-footer">Dave Youell, Pro Wrestling Chaos</footer>
-        </blockquote>
+    </section>
+    <!--
+      TODO: Video on demand features
+    -->
+    <section id="testimonial">
+      <div class="container">
+        <figure class="border-5 border-start mb-0 prose ps-3">
+          <blockquote class="mb-0">
+            <p class="mb-1">Using Your Fight Site <abbr title="Video On Demand">VOD</abbr>&trade; has been brilliant. The support is there whenever we’ve needed it, there’s no set-up costs, and the platform is simple and clear to use. We’ve used the service for over three years now and couldn’t be happier with it.</p>
+            <figcaption class="blockquote-footer mb-0 mt-0 text-body-secondary">
+              <cite class="fst-normal">Pro Wrestling Chaos</cite>
+            </figcaption>
+          </blockquote>
+        </figure>
       </div>
-    </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="d-grid d-sm-flex">
+          <a class="btn btn-lg btn-primary" href="https://vod.yourfightsite.com/channels/create?utm_source=yourfightsite.com&utm_medium=web&utm_campaign=create_channel&utm_content=get_started_cta">
+            <span>Create a video on demand channel for free</span>
+            <span aria-hidden="true" class="bi bi-chevron-right"></span>
+          </a>
+        </div>
+      </div>
+    </section>
   </div>
-</section>
-
-<section class="pb-5">
-  <div class="container text-center">
-    <figure class="mb-0">
-      <img src="/img/pages/video-on-demand/devices.png" srcset="/img/pages/video-on-demand/devices@2x.png 2x" alt="Your Fight Site VOD on web, tablet, and smartphone" class="img-fluid" />
-    </figure>
-    <p class="mb-0">
-      <span class="font-weight-bold">Your Fight Site <abbr class="initialism" title="Video On Demand">VOD</abbr> works on web, iOS, and Android.</span><br />
-      <span>Roku&reg; channel coming soon.</span>
-    </p>
-  </div>
-</section>
+</main>

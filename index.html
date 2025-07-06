@@ -1,97 +1,94 @@
 ---
-excerpt: "Professional web design for professional wrestling, MMA, and boxing promoters."
+excerpt: Your Fight Site provides web design and video on demand for wrestling, MMA, and boxing.
 layout: default
-static_header: true
-title: Wrestling Web Design, MMA Web Design, Video On Demand
+schema:
+  '@context': 'https://schema.org'
+  '@type': 'Organization'
+  address:
+    '@type': 'PostalAddress'
+    addressCountry: GB
+    addressLocality: Newcastle upon Tyne
+    postalCode: NE1 3NG
+    streetAddress: 'Clavering House, Clavering Place'
+    name: Clavering House
+  duns: '223181238'
+  email: 'info@yourfightsite.com'
+  foundingDate: '2017-08-22'
+  legalName: Your Fight Site Ltd
+  logo: 'https://yourfightsite.com/img/logo@2x.png'
+  name: Your Fight Site
+  sameAs:
+    - 'https://www.facebook.com/yourfightsite'
+    - 'https://www.instagram.com/yourfightsite'
+    - 'https://www.linkedin.com/company/yourfightsite'
+    - 'https://www.threads.net/yourfightsite'
+    - 'https://www.youtube.com/@yourfightsite'
+    - 'https://x.com/yourfightsite'
+  url: https://yourfightsite.com
+title: Your Fight Site
 ---
-<header class="jumbotron jumbotron-fluid jumbotron-static-header mb-5">
-  <div class="jumbotron-body">
+<main class="gap-5 pb-5 vstack" role="main">
+  {% capture hero_content %}We have over 20 years’ experience creating providing website design and related services to professional wrestling, <abbr title="Mixed Martial Arts">MMA</abbr>, and boxing promoters.{% endcapture %}
+  {% include hero.html title="Hello! We are Your Fight Site" content=hero_content %}
+  <section id="about">
     <div class="container">
-      <div class="row justify-content-center justify-content-md-start text-center text-md-left">
-        <div class="col-10 col-md-8 col-lg-6">
-          <h1 class="mb-2 text-white">Hello.</h1>
-          <p class="lead mb-0">We’re Your Fight Site. We have over 10 years’ experience helping professional wrestling, <abbr class="initialism" title="Mixed Martial Arts">MMA</abbr>, and boxing promoters like you with professional services such as <strong class="text-nowrap">web design</strong> and <strong class="text-nowrap">video on demand</strong>.</p>
-        </div>
+      <div class="last-child-mb-0 prose">
+        <h2 class="mb-1">About us</h2>
+        <p>We have been designing and developing websites since 2005, working with professional wrestling promoters and <abbr title="Mixed Martial Arts">MMA</abbr> organisations of all sizes across the globe.</p>
+        <p>In 2014, we created a video on demand platform from the ground up specifically for wrestling and fight sports. That platform now carries <strong>over 1,500 hours</strong><sup aria-hidden="true">1</sup> of available content.</p>
+        <ol class="mb-0 small text-body-secondary">
+          <li>As of <time datetime="2025-07">July 2025</time>.</li>
+        </ol>
       </div>
     </div>
-  </div>
-</header>
-
-<section id="services">
-  <div class="container">
-    <header class="section-heading">
-      <h1>What we do</h1>
-    </header>
-    <div class="row">
-      <div class="col-12">
-        <a class="card card-service mb-3 mb-md-4" href="/video-on-demand/">
-          <img src="/img/home/video-on-demand.jpg" srcset="/img/home/video-on-demand@2x.jpg 2x" alt="Video On Demand" class="card-img" />
-          <div class="card-img-overlay">
-            <h1 class="card-title">Video On Demand</h1>
-            <p class="card-text">
-              We launched Your Fight Site <abbr class="initialism" title="Video On Demand">VOD</abbr> in 2014, a video on demand platform free to use for wrestling promoters.
-              Since then, it has grown to feature over 250 hours of content from promoters across the <abbr class="initialism" title="United Kingdom">UK</abbr>.
-            </p>
+  </section>
+  <section id="services">
+    <div class="container">
+      <header class="mb-3">
+        <h2 class="mb-1">Services we provide</h2>
+        <p class="mb-0">We have been working with pro wrestling, <abbr title="Mixed Martial Arts">MMA</abbr>, and boxing promoters and gyms for over 20 years. We distilled that experience to focus on two core services:</p>
+      </header>
+      <ol class="g-3 list-unstyled mb-0 row row-cols-1 row-cols-sm-2">
+        <li class="col">
+          <div class="border-0 card h-100 position-relative rounded-0" data-bs-theme="dark">
+            <div class="card-body">
+              <h3 class="card-title fs-4">
+                <a class="stretched-link" href="{% link web-design.html %}">Web design</a>
+              </h3>
+              <p class="card-text">Your Fight Site has been designing eye-catching and functionality wrestling and <abbr title="Mixed Martial Arts">MMA</abbr> websites for over 20 years now. We know our craft, so see how we can help your promotion or gym.</p>
+            </div>
           </div>
-        </a>
-      </div>
-      <div class="col-md-6">
-        <a class="card card-service mb-3 mb-md-0" href="/web-design/">
-          <img src="/img/home/web-design.jpg" alt="Web Design" class="card-img" />
-          <div class="card-img-overlay">
-            <h1 class="card-title">Web Design</h1>
-            <p class="card-text">
-              Your Fight Site has been designing eye-catching and functional wrestling and <abbr class="initialism" title="Mixed Martial Arts">MMA</abbr> websites for over 10 years now.
-              We know our craft, so see how we can help your promotion.
-            </p>
+        </li>
+        <li class="col">
+          <div class="border-0 card h-100 position-relative rounded-0" data-bs-theme="dark">
+            <div class="card-body">
+              <h3 class="card-title fs-4">
+                <a class="stretched-link" href="{% link video-on-demand.html %}">Video on demand</a>
+              </h3>
+              <p class="card-text">We launched Your Fight Site <abbr title="Video On Demand">VOD</abbr>&trade; in 2014, a video on demand platform free to use for wrestling promoters. Since then, it has grown to feature over 1,500 hours of content from promoters across the <abbr title="United Kingdom">UK</abbr>.</p>
+            </div>
           </div>
-        </a>
-      </div>
-      <div class="col-md-6">
-        <a class="card card-service mb-0" href="/graphic-design/">
-          <img src="/img/home/graphic-design.jpg" alt="Graphic Design" class="card-img" />
-          <div class="card-img-overlay">
-            <h1 class="card-title">Graphic Design</h1>
-            <p class="card-text">
-              We work in print as well as web design.
-              Whether it’s posters, flyers, <abbr class="initialism" title="Digital Versatile Disc">DVD</abbr> artwork, sourvenir programmes, 8&times;10 promos or walk-out banners, we can help.
-            </p>
-          </div>
-        </a>
-      </div>
+        </li>
+      </ol>
     </div>
-  </div>
-</section>
-<section class="pt-4 pt-lg-5 pb-3" id="clients">
-  <div class="container text-center">
-    <header class="section-heading mb-2">
-      <h1>Who we work with</h1>
-    </header>
-    <p class="lead mb-4">We’ve been working with wrestling promoters and <abbr class="initialism" title="Mixed Martial Arts">MMA</abbr> promoters for <strong>over 10 years</strong>.</p>
-    <div class="mx-auto" style="max-width: 920px;">
-      <ul class="client-list mb-0">
-        {% include client.html name="Academy Pro Wrestling" url="https://www.spotfestwrestling.co.uk/academy-pro-wrestling" %}
-        {% include client.html name="ATTACK! Pro Wrestling" url="https://www.attackprowrestling.com" %}
-        {% include client.html name="British Championship Wrestling" url="https://www.bcw-wrestling.com" %}
-        {% include client.html name="Fight Factory Pro Wrestling" url="https://www.ffpwwrestling.com" %}
-        {% include client.html name="Fight Factory Wrestling" url="https://www.fightfactorywrestling.com" %}
-        {% include client.html name="LDN Wrestling" url="https://www.ldnwrestling.com" %}
-        {% include client.html name="Kamikaze Pro" url="https://vod.yourfightsite.com/channels/kamikaze-pro" %}
-        {% include client.html name="Lion Wrestling Promotions" url="https://www.lionwrestlingpromotions.com" %}
-        {% include client.html name="New Wave Wrestling Academy" url="https://vod.yourfightsite.com/channels/new-wave-wrestling-academy" %}
-        {% include client.html name="Premier British Wrestling" url="https://www.pbwwrestling.com" %}
-        {% include client.html name="Premium Wrestling Entertainment" url="https://www.pwe2024.com" %}
-        {% include client.html name="Preston City Wrestling" url="http://www.prestoncitywrestling.com" %}
-        {% include client.html name="Pro Wrestling 4 U" url="https://vod.yourfightsite.com/channels/pro-wrestling-4-u" %}
-        {% include client.html name="Pro Wrestling Chaos" url="https://vod.yourfightsite.com/channels/pro-wrestling-chaos" %}
-        {% include client.html name="Shropshire Wrestling Alliance" url="https://www.spotfestwrestling.co.uk/shropshire-wrestling-alliance" %}
-        {% include client.html name="SPOTFEST Wrestling Events" url="https://www.spotfestwrestling.co.uk" %}
-        {% include client.html name="TNT Extreme Wrestling" url="https://www.tnt-wrestling.co.uk" %}
-        {% include client.html name="UK Wrestling Alliance" url="https://vod.yourfightsite.com/channels/uk-wrestling-alliance" %}
-        {% include client.html name="Ultimate Championship Wrestling" url="https://www.ucwlegacy.co.uk" %}
-        {% include client.html name="Winnipeg Pro Wrestling" url="https://www.wpgprowrestling.com" %}
-        {% include client.html name="Wrestling In Hinckley" url="https://vod.yourfightsite.com/channels/wrestling-in-hinckley" %}
+  </section>
+  <section id="clients">
+    <div class="container">
+      <header class="gap-1 mb-3 vstack text-center">
+        <h2 class="mb-0">Who we work with</h2>
+        <p class="mb-0">We’ve worked with wrestling promoters and <abbr title="Mixed Martial Arts">MMA</abbr> promoters across the globe for over 20 years.</p>
+      </header>
+      <ul class="align-items-center d-flex flex-wrap gap-3 justify-content-center mb-0">
+        {% for client in site.clients %}
+          {% assign client_slug = client.name | slugify %}
+          {% assign client_image = '/img/clients/' | append: client_slug | append: '.png' %}
+          <li class="client-list-item client-list-item-{{ client_slug }} d-inline-flex">
+            <a href="{{ client.url }}?utm_source=yourfightsite.com&utm_medium=web&utm_content=home_client_list" rel="external" target="_blank" title="{{ client.name }}">
+              <img src="{{ client_image }}" alt="{{ client.name }}" class="d-block">
+            </a>
+          </li>
+        {% endfor %}
       </ul>
     </div>
-  </div>
-</section>
+  </section>
+</main>

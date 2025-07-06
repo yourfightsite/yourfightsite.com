@@ -1,48 +1,57 @@
 ---
+breadcrumb:
+  - href: 'index.html'
+    title: Your Fight Site
+  - href: 'web-design.html'
+    title: Web Design
+  - active: true
+    title: Boxing Web Design
+excerpt: "Affordable website design for boxing promoters and gyms, backed up by 20 years’ experience."
 layout: default
-messenger_logged_in_greeting: 'Hey, are you looking to get a boxing website made? Let us know if you have any questions!'
-messenger_ref: web_design_boxing
+meta_title: Boxing web design from Your Fight Site
 permalink: /boxing-web-design/
-static_header: true
+schema:
+  '@context': 'https://schema.org'
+  '@type': 'Product'
+  description: 'Affordable website design for boxing promoters and gyms.'
+  image: 'https://www.yourfightsite.com/img/logo@2x.png'
+  name: Boxing Web Design
+  offers:
+    '@type': 'Offer'
+    priceCurrency: 'GBP'
+    price: 99.00
+    url: 'https://yourfightsite.com/boxing-web-design'
 title: Boxing Web Design
-twitter:
-  card: summary_large_image
 ---
-<header class="jumbotron jumbotron-fluid jumbotron-static-header jumbotron-web-design mb-5">
-  <div class="jumbotron-body">
+<div class="bg-body text-body" data-bs-theme="dark">
+  <div class="container">
+    {% include breadcrumb.html %}
+  </div>
+</div>
+<main class="gap-4 mb-4 vstack" role="main">
+  {% include hero.html title="Website design for boxing promoters and gyms" content="We have over 20 years’ experience designing websites for boxing promoters and gyms." %}
+  <section id="features">
     <div class="container">
-      <div class="row justify-content-center justify-content-md-start text-center text-md-left">
-        <div class="col-10 col-md-8 col-lg-6">
-          <h1 class="mb-2 text-white">Professional web design for boxing promoters.</h1>
-          <p class="lead mb-4">We have over 10 years’ experience designing websites for boxing promoters like you.</p>
-          <a class="btn btn-primary" data-toggle="modal" data-services="web-design" href="#quote">
-            <span class="btn-text">Get a free quote now</span>
-          </a>
-        </div>
+      <h2 class="mb-3">Features</h2>
+      <div class="g-3 row row-cols-1 row-cols-sm-2">
+        {% include feature.html title="Custom website design" description="Get a professionally-designed website created just for your boxing promotion or gym." %}
+        {% include feature.html title="Events" description="Easily manage your calendar of upcoming events, as well as add results for past events and fights." %}
+        {% include feature.html title="Tickets" description="Sell tickets to upcoming events. Then check attendees in on show day using our mobile check-in app." %}
+        {% include feature.html title="Fighters" description="Help fans get to know your stable of fighters better with fight records, statistics, social media links, and more." %}
+        {% include feature.html title="Online store" description="We don’t sell e-commerce as an add-on; it comes with every website. Increase revenue by selling your own merchandise." %}
+        {% include feature.html title="News" description="Keep fans updated on newly-signed fights, as well as breaking stories from your organisation or gym." %}
+        {% capture vod_feature_title %}<abbr title="Video On Demand">VOD</abbr> integration{% endcapture %}
+        {% capture vod_feature_description %}Because we have our own <a href="{% link video-on-demand.html %}">boxing <abbr title="Video On Demand">VOD</abbr> platform</a> we can seemlessly integrate your channel with your website.{% endcapture %}
+        {% include feature.html title=vod_feature_title description=vod_feature_description %}
+        {% include feature.html title="Cloud-hosted" description="Your website is secure, backed up, and won’t go down during important ticket-selling periods." %}
       </div>
     </div>
-  </div>
-</header>
-
-<section class="section mb-5" id="features">
-  <div class="container">
-    <div class="row">
-      {% include feature.html icon="palette" title="Custom website design" description="Get a professionally-designed website created just for your boxing promotion." %}
-      {% include feature.html icon="calendar-alt" title="Events" description="Easily manage your calendar of upcoming events, as well as add results for past fight cards." %}
-      {% include feature.html icon="ticket-alt" title="Tickets" description="Sell tickets to upcoming events. Then check attendees in on show day using our mobile check-in app." note="Coming to iOS in 2019." %}
-      {% include feature.html icon="boxing-glove" title="Boxers" description="Help fans get to know your stable of boxers better with fight records, statistics, social media links, and more." %}
-      {% include feature.html icon="shopping-basket" title="E-commerce" description="We don’t sell e-commerce as an add-on; it comes with every website. Increase revenue by selling your own merchandise." %}
-      {% include feature.html icon="newspaper" title="News" description="Keep fans updated on newly-signed fights, as well as breaking stories from your organisation." %}
-      {% include feature.html icon="play-circle" title="VOD integration" description="Because we have our own boxing VOD platform, we can seemlessly integrate your channel with your website." %}
-      {% include feature.html icon="cloud-upload" title="Cloud hosted" description="Your website is secure, backed up, and won’t go down during important ticket-selling periods." %}
+  </section>
+  <section id="pricing">
+    <div class="container">
+      <h2 class="fs-3 mb-1">How much does a boxing website cost?</h2>
+      <p>We’ve distilled more than 20 years’ of boxing web design experience into an easy-to-use platform.</p>
+      {% include website-pricing.html %}
     </div>
-    <footer class="text-center">
-      <a class="btn btn-primary" data-toggle="modal" data-services="web-design" href="#quote">
-        <span class="btn-text">Get a free quote now</span>
-      </a>
-    </footer>
-  </div>
-</section>
-
-{% include web-design-pricing.html category="boxing" %}
-{% include latest-projects.html category="boxing" %}
+  </section>
+</main>

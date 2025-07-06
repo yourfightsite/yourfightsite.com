@@ -1,57 +1,94 @@
-<div class="modal fade" id="quote" tabindex="-1" role="dialog" aria-labelledby="quote-label" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+<div
+  aria-hidden="true"
+  aria-labelledby="quote-modal-label"
+  class="fade modal"
+  id="quote"
+  tabindex="-1"
+  x-data="{
+    form: {
+      data: {
+        name: '',
+        organisation: '',
+        email: '',
+        services: [],
+      },
+      processing: false,
+    },
+    reset() {
+      this.form.data.name = '';
+      this.form.data.organisation = '';
+      this.form.data.email = '';
+      this.form.data.services = [];
+      this.form.processing = false;
+    },
+  }"
+  x-on:hidden-bs-modal.dot="reset"
+>
+  <div class="modal-dialog">
     <div class="modal-content">
-      <form actions="/thanks" method="POST" name="Quote" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field">
-        <div style="display: none;">
-          <input type="email" name="bot-field" autocomplete="off" />
-        </div>
-        <div class="modal-header">
-          <h4 class="modal-title" id="quote-label">Get quote</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="form-group">
-            <label class="form-control-label" for="quote-email">Your email address:</label>
-            <input type="email" name="email" class="form-control" id="quote-email" placeholder="you@example.com" required />
-            <small class="form-text text-muted">We will never share your email address or spam you.</small>
+      <header class="border-0 modal-header">
+        <h1 class="modal-title fs-5" id="quote-modal-label">Quote</h1>
+        <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button" x-bind:disabled="form.processing"></button>
+      </header>
+      <div class="modal-body pt-0">
+        <form
+          action="{% link thanks.html %}"
+          data-netlify="true"
+          data-netlify-recaptcha="true"
+          id="quote-form"
+          method="post"
+          name="Quote"
+          netlify-honeypot="bot-field"
+          x-ref="form"
+        >
+          <div class="gap-3 vstack">
+            <div style="display: none;">
+              <input type="email" name="bot-field" autocomplete="off">
+            </div>
+            <fieldset x-bind:disabled="form.processing">
+              <legend>Your details</legend>
+              <div class="gap-3 vstack">
+                <div>
+                  <label class="form-label" for="name">Name</label>
+                  <input autocomplete="name" class="form-control" id="name" name="name" required type="text" x-model="form.data.name">
+                </div>
+                <div>
+                  <label class="form-label mb-0" for="organisation">Organisation name</label>
+                  <p class="mb-2 small text-body-secondary">The name of your promotion or gym.</p>
+                  <input aria-describedby="organisation" autocomplete="organization" class="form-control" id="organisation" name="organisation" required type="text" x-model="form.data.organisation">
+                </div>
+                <div>
+                  <label class="form-label" for="email">Email address</label>
+                  <input autocomplete="email" class="form-control" id="email" name="email" required type="email" x-model="form.data.email">
+                </div>
+              </div>
+            </fieldset>
+            <fieldset x-bind:disabled="form.processing">
+              <legend>Services interested in</legend>
+              <div class="gap-3 vstack">
+                <div>
+                  <div class="form-check">
+                    <input class="form-check-input" id="service-web-design" name="services[]" type="checkbox" value="web-design" x-model="form.data.services">
+                    <label class="form-check-label" for="service-web-design">Web design</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" id="service-vod" name="services[]" type="checkbox" value="vod" x-model="form.data.services">
+                    <label class="form-check-label" for="service-vod">Video on demand</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div data-netlify-recaptcha="true"></div>
+                </div>
+              </div>
+            </fieldset>
+            <div class="align-items-center d-flex gap-2">
+              <button class="btn btn-primary" type="submit" x-bind:disabled="form.processing">
+                <span>Submit</span>
+              </button>
+            </div>
           </div>
-          <div class="form-group">
-            <label class="form-control-label" for="service-web-design">Services interested in:</label>
-            <div>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="service-web-design" name="service[]" value="Web design" data-service="web-design" />
-                <label class="custom-control-label" for="service-web-design">Web design</label>
-              </div>
-            </div>
-            <div>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="service-graphic-design" name="service[]" value="Graphic design" data-service="graphic-design" />
-                <label class="custom-control-label" for="service-graphic-design">Graphic design</label>
-              </div>
-            </div>
-            <div>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="service-video-on-demand" name="service[]" value="Video on demand" data-service="video-on-demand" />
-                <label class="custom-control-label" for="service-video-on-demand">Video on demand</label>
-              </div>
-            </div>
-            <div>
-              <div class="custom-control custom-checkbox">
-                <input type="checkbox" class="custom-control-input" id="service-event-ticketing" name="service[]" value="Event ticketing" data-service="event-ticketing" />
-                <label class="custom-control-label" for="service-event-ticketing">Event ticketing</label>
-              </div>
-            </div>
-          </div>
-          <div class="form-group mb-0">
-            <div data-netlify-recaptcha="true"></div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="submit" class="btn btn-primary">Get quote</button>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   </div>
 </div>

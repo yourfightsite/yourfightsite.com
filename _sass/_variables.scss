@@ -1,70 +1,59 @@
-$ignore-warning: true;
+$enable-caret: false;
+$enable-negative-margins: true;
 
-$enable-deprecation-messages: false;
-$enable-shadows: true;
-$enable-transitions: false;
-
-$red: #e3342f;
+$black: #0d0d0d;
 $white: #fff;
 
-$lead-font-weight: 400;
+$red: #d4351c;
+$green: #00703c;
+$blue: #1d70b8;
+$yellow: #fd0;
 
 $primary: $red;
-$dark: #111417;
+$dark: $black;
 
-$body-color: #3d4852;
+$body-color: $black;
 
-$text-muted: #8795a1;
+$link-color: $blue;
 
-$font-family-sans-serif: "Ubuntu", sans-serif;
+$grid-gutter-width: 1rem;
 
-$headings-color: $dark;
+$container-padding-x: $grid-gutter-width * 2;
+
+$border-color: #b1b4b6;
+
+$border-radius-sm: .1875rem;
+$border-radius: $border-radius-sm;
+$border-radius-lg: .25rem;
+
+$component-active-color: $white;
+$component-active-bg: $blue;
+
+$focus-ring-color: rgba($blue, .25);
+
 $headings-font-family: "Quantico", sans-serif;
 $headings-font-weight: 400;
-$headings-line-height: 1.1;
-$headings-margin-bottom: 1rem;
-
-$input-border-focus: $primary;
-
-$modal-backdrop-bg: #000;
-$modal-backdrop-opacity: .85;
-
-$thumbnail-padding: 0;
-$thumbnail-bg: $body-color;
-$thumbnail-border-width: 1rem;
-$thumbnail-border-color: #fff;
-$thumbnail-border-radius: .1rem;
-$thumbnail-box-shadow: 0 .1rem 1rem rgba(#000, .1);
 
 $btn-font-weight: 500;
-$btn-box-shadow: none;
-$btn-focus-box-shadow: none;
-$btn-active-box-shadow: none;
+$btn-transition: none;
 
-$dropdown-border-width: 0;
-$dropdown-link-color: $body-color;
-$dropdown-link-hover-color: $primary;
-$dropdown-link-hover-bg: transparent;
-$dropdown-link-disabled-color: rgba($body-color, .5);
+$input-transition: none;
 
+$legend-font-size: 1.125rem;
+$legend-font-weight: 700;
+
+$nav-link-transition: none;
+
+$navbar-padding-y: 1rem;
 $navbar-dark-color: $white;
-$navbar-dark-hover-color: $red;
-$navbar-dark-active-color: $red;
-$navbar-dark-disabled-color: rgba($white, .5);
-$navbar-dark-toggler-border-color: rgba($white, .4);
-$navbar-dark-brand-color: $white;
-$navbar-dark-brand-hover-color: $primary;
+$navbar-dark-hover-color: $navbar-dark-color;
+$navbar-dark-active-color: $primary;
 
-$tooltip-bg: $dark;
+$breadcrumb-font-size: .875rem;
+$breadcrumb-divider: "\203A";
+$breadcrumb-active-color: var(--bs-emphasis-color);
+$breadcrumb-margin-bottom: 0;
 
-$card-border-radius: 0;
-$card-inner-border-radius: 0;
+$body-bg-dark: $dark;
 
-$breadcrumb-padding-x: 0;
-$breadcrumb-padding-y: 0;
-$breadcrumb-item-padding: .5rem;
-$breadcrumb-bg: transparent;
-$breadcrumb-active-color: $body-color;
-$breadcrumb-divider: quote("»");
-$breadcrumb-divider-color: $text-muted;
-$breadcrumb-border-radius: 0;
+$modal-backdrop-opacity: .9;

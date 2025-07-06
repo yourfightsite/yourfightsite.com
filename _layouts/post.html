@@ -1,5 +1,5 @@
 ---
-layout: news
+layout: page
 ---
 <nav class="mb-3 pb-3 border-bottom" aria-label="Breadcrumbs">
   <ol class="breadcrumb mb-0 small">
@@ -25,10 +25,4 @@ layout: news
   <div class="post-content" itemprop="articleBody">
     {{ content }}
   </div>
-  <section class="mb-5" id="share">
-    {% assign share_url = page.url %}
-    {% assign share_title = page.title %}
-    {% include share.html url=share_url title=share_title %}
-    {% include comments.html %}
-  </section>
 </article>
