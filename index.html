@@ -28,7 +28,7 @@ schema:
 title: Your Fight Site
 ---
 <main class="gap-5 pb-5 vstack" role="main">
-  {% capture hero_content %}We have over 20 years’ experience creating providing website design and related services to professional wrestling, <abbr title="Mixed Martial Arts">MMA</abbr>, and boxing promoters.{% endcapture %}
+  {% capture hero_content %}We have over 20 years’ experience <a href="{% link web-design.html %}">designing websites</a> and providing <a href="{% link video-on-demand.html %}">video on demand</a> solutions to professional wrestling, <abbr title="Mixed Martial Arts">MMA</abbr>, and boxing organisations.{% endcapture %}
   {% include hero.html title="Hello! We are Your Fight Site" content=hero_content %}
   <section id="about">
     <div class="container">

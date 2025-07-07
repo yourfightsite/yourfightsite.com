@@ -105,6 +105,10 @@ h6, .h6 {
 }
 
 .hero-text {
+  --bs-link-color: var(--bs-body-color);
+  --bs-link-color-rgb: var(--bs-body-color-rgb);
+  --bs-link-hover-color: var(--bs-emphasis-color);
+  --bs-link-hover-color-rgb: var(--bs-emphasis-color-rgb);
   font-size: 1.125rem;
 }
 
