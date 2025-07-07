@@ -28,14 +28,14 @@ title: MMA Web Design
     {% include breadcrumb.html %}
   </div>
 </div>
-<main class="gap-4 mb-4 vstack" role="main">
+<main class="gap-5 mb-5 vstack" role="main">
   {% capture hero_title %}Website design for <abbr title="Mixed Martial Arts">MMA</abbr> promoters and gyms{% endcapture %}
   {% capture hero_content %}We have over 20 years’ experience designing websites for <abbr title="Mixed Martial Arts">MMA</abbr> promoters and gyms.{% endcapture %}
   {% include hero.html title=hero_title content=hero_content %}
   <section id="features">
     <div class="container">
       <h2 class="mb-3">Features</h2>
-      <div class="g-3 row row-cols-1 row-cols-sm-2">
+      <div class="g-3 row row-cols-1 row-cols-md-2">
         {% capture design_feature_description %}Get a professionally-designed website created just for your <abbr title="Mixed Martial Arts">MMA</abbr> promotion or gym.{% endcapture %}
         {% include feature.html title="Custom website design" description=design_feature_description %}
         {% include feature.html title="Events" description="Easily manage your calendar of upcoming events, as well as add results for past events and fights." %}
@@ -50,10 +50,13 @@ title: MMA Web Design
       </div>
     </div>
   </section>
+  <div class="container">
+    <hr class="my-0">
+  </div>
   <section id="pricing">
     <div class="container">
-      <h2 class="fs-3 mb-1">How much does an <abbr title="Mixed Martial Arts">MMA</abbr> website cost?</h2>
-      <p>We’ve distilled more than 20 years’ of <abbr title="Mixed Martial Arts">MMA</abbr> web design experience into an easy-to-use platform.</p>
+      <h2 class="mb-1">How much does an <abbr title="Mixed Martial Arts">MMA</abbr> website cost?</h2>
+      <p class="mb-4">We’ve distilled more than 20 years’ of <abbr title="Mixed Martial Arts">MMA</abbr> web design experience into an easy-to-use platform.</p>
       {% include website-pricing.html %}
     </div>
   </section>

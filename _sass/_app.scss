@@ -3,7 +3,7 @@
 
 a {
   text-decoration-thickness: .0625rem;
-  text-underline-offset: .1875rem;
+  text-underline-offset: .1875em;
 
   &:hover {
     text-decoration-skip: none;
@@ -38,7 +38,6 @@ h6, .h6 {
 
 .btn:not(.btn-link) {
   font-family: $headings-font-family;
-  font-weight: $headings-font-weight;
   text-transform: uppercase;
 }
 
