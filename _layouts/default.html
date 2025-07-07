@@ -12,6 +12,7 @@
     <meta property="og:site_name" content="{{ site.title }}">
     <meta property="og:title" content="{{ page.meta.og.title | default: page.meta_title | default: page.title }}">
     <meta property="og:type" content="{{ page.meta.og.type | default: 'article' }}">
+    <meta name="twitter:card" content="{{ page.meta.twitter.card | default: 'summary' }}">
     <meta name="twitter:creator" content="@martinbean">
     <meta name="twitter:description" content="{{ page.meta.twitter.description | default: page.meta_description | default: page.excerpt }}">
     {% if page.meta.twitter.image %}
@@ -20,10 +21,6 @@
     <meta name="twitter:site" content="@yourfightsite">
     <meta name="twitter:title" content="{{ page.meta.twitter.title | default: page.meta_title | default: page.title }}">
     <title>{{ page.meta_title | default: page.title | default: site.title | escape_once }}</title>
-    {% if jekyll.environment == "production" %}
-    <link href="https://www.googletagmanager.com" rel="preconnect dns-prefetch" crossorigin="anonymous">
-    <link href="https://www.google-analytics.com" rel="preconnect dns-prefetch" crossorigin="anonymous">
-    {% endif %}
     <link href="/favicon.ico" rel="icon" type="image/x-icon">
     <link href="/img/icons/icon-57.png" rel="apple-touch-icon" sizes="57x57">
     <link href="/img/icons/icon-76.png" rel="apple-touch-icon" sizes="76x76">
