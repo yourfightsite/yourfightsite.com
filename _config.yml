@@ -59,8 +59,6 @@ clients:
     url: https://vod.yourfightsite.com/channels/wrestleatomic
   - name: "ATTACK! Pro Wrestling"
     url: https://www.attackprowrestling.com
-  - name: Black Country Championship Wrestling
-    url: https://vod.yourfightsite.com/channels/black-country-championship-wrestling
   - name: Branded Outlaw Wrestling
     url: https://vod.yourfightsite.com/channels/branded-outlaw-wrestling
   - name: British Championship Wrestling
